@@ -4,7 +4,7 @@ import './App.css'
 import { login, logout, selectUser } from './features/userSlice'
 import Feed from './components/feed/Feed'
 import Header from './components/header/Header'
-import Sidebar from './components/Sidebar/Sidebar'
+import Sidebar from './components/sidebar/Sidebar'
 import Login from './components/login/Login'
 import { auth } from './helpers/firebase'
 

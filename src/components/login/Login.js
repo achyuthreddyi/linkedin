@@ -40,7 +40,21 @@ function Login () {
   }
 
   const loginToApp = e => {
+    console.log('working')
     e.preventDefault()
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then(userAuth => {
+        dispatch(
+          login({
+            email: userAuth.user.email,
+            uid: userAuth.user.uid,
+            displayName: userAuth.user.displayName,
+            profilepicUrl: userAuth.user.photoUrl
+          })
+        )
+      })
+      .catch(error => alert(error))
   }
   return (
     <div className='login'>
