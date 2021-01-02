@@ -7,6 +7,7 @@ import Header from './components/header/Header'
 import Sidebar from './components/sidebar/Sidebar'
 import Login from './components/login/Login'
 import { auth } from './helpers/firebase'
+import Widget from './components/widget/Widget'
 
 function App () {
   const user = useSelector(selectUser)
@@ -40,6 +41,7 @@ function App () {
         <div className='app_body'>
           <Sidebar />
           <Feed />
+          <Widget />
         </div>
       )}
       {/* Header */}
